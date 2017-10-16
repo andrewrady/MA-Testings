@@ -4,3 +4,6 @@ currently this application is in development. The next main phase it to add a fr
 - Angular
 - Vue.js
 
+# License
+[MIT](https://opensource.org/licenses/MIT)
+
