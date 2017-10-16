@@ -1,0 +1,11 @@
+c:\users\andrew.rady\source\repos\MATesting\MATesting\bin\Debug\netcoreapp2.0\MATesting.deps.json
+c:\users\andrew.rady\source\repos\MATesting\MATesting\bin\Debug\netcoreapp2.0\MATesting.runtimeconfig.json
+c:\users\andrew.rady\source\repos\MATesting\MATesting\bin\Debug\netcoreapp2.0\MATesting.runtimeconfig.dev.json
+c:\users\andrew.rady\source\repos\MATesting\MATesting\bin\Debug\netcoreapp2.0\MATesting.dll
+c:\users\andrew.rady\source\repos\MATesting\MATesting\bin\Debug\netcoreapp2.0\MATesting.pdb
+c:\users\andrew.rady\source\repos\MATesting\MATesting\obj\Debug\netcoreapp2.0\MATesting.csprojResolveAssemblyReference.cache
+c:\users\andrew.rady\source\repos\MATesting\MATesting\obj\Debug\netcoreapp2.0\MATesting.csproj.CoreCompileInputs.cache
+c:\users\andrew.rady\source\repos\MATesting\MATesting\obj\Debug\netcoreapp2.0\MATesting.AssemblyInfoInputs.cache
+c:\users\andrew.rady\source\repos\MATesting\MATesting\obj\Debug\netcoreapp2.0\MATesting.AssemblyInfo.cs
+c:\users\andrew.rady\source\repos\MATesting\MATesting\obj\Debug\netcoreapp2.0\MATesting.dll
+c:\users\andrew.rady\source\repos\MATesting\MATesting\obj\Debug\netcoreapp2.0\MATesting.pdb
