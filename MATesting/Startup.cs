@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MATesting.Models;
+using MAInstructor.Models;
 
 namespace MATesting
 {
@@ -26,6 +27,7 @@ namespace MATesting
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<StudentContext>(opt => opt.UseInMemoryDatabase("Students"));
+            services.AddDbContext<InstructorContext>(opt => opt.UseInMemoryDatabase("Instructors"));
             services.AddMvc();
         }
 
