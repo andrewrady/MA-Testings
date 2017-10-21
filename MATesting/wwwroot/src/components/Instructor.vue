@@ -5,7 +5,21 @@
 </template>
 
 <script>
-export default {};
+import { mapState } from 'vuex';
+
+export default {
+  name: 'Instructor',
+  data() {
+    return {
+
+    }
+  },
+  computed: {
+    ...mapState([
+      'instructor'
+    ])
+  }
+};
 </script>
 
 <style>

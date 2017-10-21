@@ -16,13 +16,15 @@
         </ul>
       </div>
     </nav>
-    <router-view></router-view>
+    <div class="container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "MA Testing",
+  name: "ATA-Testing",
   data() {
     return {
       msg: "Welcome to Your Vue.js App"
