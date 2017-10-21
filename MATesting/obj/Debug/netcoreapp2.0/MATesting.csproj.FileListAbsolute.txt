@@ -9,3 +9,14 @@ c:\users\andrew.rady\source\repos\MATesting\MATesting\obj\Debug\netcoreapp2.0\MA
 c:\users\andrew.rady\source\repos\MATesting\MATesting\obj\Debug\netcoreapp2.0\MATesting.AssemblyInfo.cs
 c:\users\andrew.rady\source\repos\MATesting\MATesting\obj\Debug\netcoreapp2.0\MATesting.dll
 c:\users\andrew.rady\source\repos\MATesting\MATesting\obj\Debug\netcoreapp2.0\MATesting.pdb
+C:\Users\KazRage\Documents\Websites\MATesting\MA-Testings\MATesting\bin\Debug\netcoreapp2.0\MATesting.deps.json
+C:\Users\KazRage\Documents\Websites\MATesting\MA-Testings\MATesting\bin\Debug\netcoreapp2.0\MATesting.runtimeconfig.json
+C:\Users\KazRage\Documents\Websites\MATesting\MA-Testings\MATesting\bin\Debug\netcoreapp2.0\MATesting.runtimeconfig.dev.json
+C:\Users\KazRage\Documents\Websites\MATesting\MA-Testings\MATesting\obj\Debug\netcoreapp2.0\MATesting.csprojResolveAssemblyReference.cache
+C:\Users\KazRage\Documents\Websites\MATesting\MA-Testings\MATesting\obj\Debug\netcoreapp2.0\MATesting.AssemblyInfo.cs
+C:\Users\KazRage\Documents\Websites\MATesting\MA-Testings\MATesting\obj\Debug\netcoreapp2.0\MATesting.dll
+C:\Users\KazRage\Documents\Websites\MATesting\MA-Testings\MATesting\obj\Debug\netcoreapp2.0\MATesting.pdb
+C:\Users\KazRage\Documents\Websites\MATesting\MA-Testings\MATesting\bin\Debug\netcoreapp2.0\MATesting.dll
+C:\Users\KazRage\Documents\Websites\MATesting\MA-Testings\MATesting\bin\Debug\netcoreapp2.0\MATesting.pdb
+C:\Users\KazRage\Documents\Websites\MATesting\MA-Testings\MATesting\obj\Debug\netcoreapp2.0\MATesting.csproj.CoreCompileInputs.cache
+C:\Users\KazRage\Documents\Websites\MATesting\MA-Testings\MATesting\obj\Debug\netcoreapp2.0\MATesting.AssemblyInfoInputs.cache

@@ -1,33 +1,20 @@
 <template>
   <div id="app">
-    {{ msg }}
+    <router-link :to="{ name: 'Home' }">Home</router-link>
+    <router-link :to="{ name: 'Instructor' }">Instructor</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
 
 export default {
-  name: 'app',
+  name: 'MA Testing',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
   },
-  mounted() {
-    this.getData();
-  },
-  methods: {
-    getData() {
-      axios.get('http://localhost:59614/api/student/')
-        .then(res => {
-          console.log(res);
-        })
-        .catch(err => {
-          console.log(err)
-        })
-    }
-  }
 }
 </script>
 
