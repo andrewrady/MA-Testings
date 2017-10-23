@@ -36,6 +36,21 @@ const actions = {
       .catch(err => {
         console.log(err)
       })
+  },
+  sendInstructor: ({state, dispatch}, payload) => {
+    axios({method: 'post', url: 'http://localhost:59614/api/instructor', data: payload})
+      .then(() => {
+        dispatch('populateInstructor')
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
+  deleteInstructor: ({state, dispatch}, payload) => {
+    axios({method: 'delete', url: `http://localhost:59614/api/instructor/${payload}`})
+      .then(() => {
+        dispatch('populateInstructor')
+      })
   }
 }
 

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/components/Index'
-import Instructor from '@/components/Instructors'
+import Instructor from '@/components/instructors/Instructors'
 
 Vue.use(Router)
 
