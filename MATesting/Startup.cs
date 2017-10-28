@@ -43,9 +43,12 @@ namespace MATesting
       app.UseDefaultFiles();
       app.UseStaticFiles();
       app.UseCors(builder =>
-        builder.WithOrigins("http://localhost:8081")
-        .AllowAnyHeader()
-      );
+      {
+        builder.AllowAnyHeader();
+        builder.AllowAnyMethod();
+        builder.AllowCredentials();
+        builder.AllowAnyOrigin();
+      });
       app.UseMvc();
     }
   }
