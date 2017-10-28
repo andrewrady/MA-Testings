@@ -27,7 +27,7 @@ namespace MAInstructor.Controllers
       return _context.Instructors.ToList();
     }
 
-    [HttpGet("{id}", Name="GetIntructor")]
+    [HttpGet("{id}", Name="GetInstructor")]
     public IActionResult GetById(long id)
     {
       var instructor = _context.Instructors.FirstOrDefault(i => i.Id == id);
@@ -41,7 +41,7 @@ namespace MAInstructor.Controllers
     [HttpPost]
     public IActionResult Create([FromBody] Instructor instructor)
     {
-      if(instructor == null)
+      if (instructor == null)
       {
         return BadRequest();
       }
@@ -49,8 +49,8 @@ namespace MAInstructor.Controllers
       _context.Instructors.Add(instructor);
       _context.SaveChanges();
 
-      return CreatedAtRoute("GetInstructor", new { id = instructor.Id}, instructor);
-    } 
+      return CreatedAtRoute("GetInstructor", new { id = instructor.Id }, instructor);
+    }
 
     [HttpPut("{id}")]
     public IActionResult Update(long id, [FromBody] Instructor instructor)

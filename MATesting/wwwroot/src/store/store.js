@@ -5,11 +5,15 @@ import axios from 'axios'
 Vue.use(Vuex)
 
 const state = {
+  showAdd: false,
   instructors: {},
   students: {}
 }
 
 const mutations = {
+  toggleAdd: (state, payload) => {
+    state.showAdd = payload
+  },
   setInstructors: (state, payload) => {
     state.instructors = payload
   },
@@ -39,6 +43,15 @@ const actions = {
   },
   sendInstructor: ({state, dispatch}, payload) => {
     axios({method: 'post', url: 'http://localhost:59614/api/instructor', data: payload})
+      .then(() => {
+        dispatch('populateInstructor')
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
+  updateInstructor: ({state, dispatch}, payload) => {
+    axios({method: 'put', url: `http://localhost:59614/api/instructor/${payload.id}`, data: payload})
       .then(() => {
         dispatch('populateInstructor')
       })

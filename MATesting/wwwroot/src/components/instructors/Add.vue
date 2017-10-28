@@ -21,9 +21,10 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'add-instructor',
-  props: ['showAdd'],
   data() {
     return {
       name: '',
@@ -31,13 +32,20 @@ export default {
       error: ''
     }
   },
+  computed: {
+    ...mapState([
+      'showAdd'
+    ])
+  },
   methods: {
     createInstructor(event) {
       if(!this.name) {
         this.error = 'You need to enter a name'
       }
+      const toggle = !this.showAdd;
       const instructor = { 'name': this.name, 'rank': this.rank}
       this.$store.dispatch('sendInstructor', instructor)
+      this.$store.commit('toggleAdd', toggle);
     }
   }
 }

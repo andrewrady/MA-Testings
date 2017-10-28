@@ -18,6 +18,7 @@
 					<th scope="col">Name</th>
 					<th scope="col">Rank</th>
 					<th scope="col">Delete</th>
+					<td scope="col">Edit</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -26,30 +27,35 @@
 					<td>{{ instructor.name }}</td>
 					<td>{{ instructor.rank }}</td>
 					<td><button type="button" class="btn btn-outline-danger" @click="deleteInstructor(instructor.id)">Delete</button></td>
+					<td><button type="button" class="btn btn-outline-success" @click="editInstructor(instructor)" data-toggle="modal" data-target="#editModal">Edit</button></td>
 				</tr>
 			</tbody>
 		</table>
+		<edit :instructor="currentInstructor"></edit>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
 import Add from './Add.vue'
+import Edit from './Edit.vue';
 
 export default {
 	name: 'Instructor',
 	components: {
-		Add
+		Add,
+		Edit
 	},
 	data() {
 		return {
-			showAdd: false,
-			showEdit: false
+			showEdit: false,
+			currentInstructor: {}
 		}
 	},
   computed: {
 		...mapState([
-				'instructors'
+				'instructors',
+				'showAdd'
 			])
 	},
 	watch: {
@@ -63,7 +69,11 @@ export default {
 	},
 	methods: {
 		toggleAdd() {
-			this.showAdd = !this.showAdd;
+			const toggle = !this.showAdd;
+			this.$store.commit('toggleAdd', toggle);
+		},
+		editInstructor(edit) {
+			this.currentInstructor = edit;
 		},
 		deleteInstructor(id) {
 			this.$store.dispatch('deleteInstructor', id);
