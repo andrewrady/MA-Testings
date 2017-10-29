@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using MATesting.Models;
 using MAInstructor.Models;
+using MARank.Models;
 
 namespace MATesting
 {
@@ -28,6 +29,7 @@ namespace MATesting
     {
       services.AddDbContext<StudentContext>(opt => opt.UseInMemoryDatabase("Students"));
       services.AddDbContext<InstructorContext>(opt => opt.UseInMemoryDatabase("Instructors"));
+      services.AddDbContext<RankContext>(opt => opt.UseInMemoryDatabase("Ranks"));
       services.AddCors();
       services.AddMvc();
     }

@@ -33,7 +33,7 @@ const actions = {
       })
   },
   populateStudents: ({state, commit}) => {
-    axios({method: 'get', url: 'http://localhost:59614/api/instructor'})
+    axios({method: 'get', url: 'http://localhost:59614/api/student'})
       .then(res => {
         commit('setStudents', res.data)
       })
@@ -63,6 +63,34 @@ const actions = {
     axios({method: 'delete', url: `http://localhost:59614/api/instructor/${payload}`})
       .then(() => {
         dispatch('populateInstructor')
+      })
+  },
+  // Students
+  createStudent: ({state, dispatch}, payload) => {
+    axios({method: 'post', url: 'http://localhost:59614/api/student', data: payload})
+      .then(() => {
+        dispatch('populateStudents')
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
+  updateStudent: ({state, dispatch}, payload) => {
+    axios({method: 'put', url: `http://localhost:59614/api/student/${payload.id}`, data: payload})
+      .then(() => {
+        dispatch('populateStudents')
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
+  deleteStudent: ({state, dispatch}, payload) => {
+    axios({method: 'delete', url: `http://localhost:59614/api/student/${payload}`})
+      .then(() => {
+        dispatch('populateStudents')
+      })
+      .catch(err => {
+        console.log(err)
       })
   }
 }
