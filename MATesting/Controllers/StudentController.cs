@@ -68,6 +68,7 @@ namespace MATesting.Controllers
 
       updateStudent.Name = student.Name;
       updateStudent.Rank = student.Rank;
+      updateStudent.Size = student.Size;
 
       _context.Students.Update(updateStudent);
       _context.SaveChanges();

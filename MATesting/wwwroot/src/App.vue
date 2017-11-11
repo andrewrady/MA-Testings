@@ -11,7 +11,13 @@
             <router-link to="/" class="nav-link">Home</router-link>
           </li>
           <li class="nav-item">
+            <router-link to="/student" class="nav-link">Students</router-link>
+          </li>
+          <li class="nav-item">
             <router-link to="/instructor" class="nav-link">Instructors</router-link>
+          </li>
+           <li class="nav-item">
+            <router-link to="/settings" class="nav-link">Settings</router-link>
           </li>
         </ul>
       </div>
@@ -24,6 +30,6 @@
 
 <script>
 export default {
-  name: "app"
+  name: "app",
 };
 </script>
