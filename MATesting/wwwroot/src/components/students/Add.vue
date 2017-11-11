@@ -10,7 +10,9 @@
           <input type="text" class="form-control" placeholder="Name" v-model="name">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Rank" v-model="rank">
+          <select v-model="rank" class="form-control">
+            <option v-for="(rank, step) in ranks" :key="step" :value="rank.name">{{ rank.name }}</option>
+          </select>
         </div>
         <div class="col">
           <input type="number" class="form-control" placeholder="Size" v-model="size">
@@ -38,8 +40,12 @@ export default {
   },
   computed: {
     ...mapState([
-      'showAdd'
+      'showAdd',
+      'ranks'
     ])
+  },
+  mounted() {
+    this.$store.dispatch('populateRanks');
   },
   methods: {
     createStudent() {

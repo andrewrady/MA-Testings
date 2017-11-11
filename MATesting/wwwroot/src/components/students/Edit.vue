@@ -14,7 +14,9 @@
           <input type="text" class="form-control" placeholder="Name" v-model="currentName">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Rank" v-model="currentRank">
+          <select v-model="currentRank" class="form-control">
+            <option v-for="(rank, step) in ranks" :key="step" :value="rank.name">{{ rank.name }}</option>
+          </select>
         </div>
         <div class="col">
           <input type="number" class="form-control" placeholder="Size" v-model="currentSize">
@@ -31,6 +33,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'student-edit',
   props: ['student'],
@@ -41,12 +45,20 @@ export default {
       currentSize: ''
     }
   },
+  computed: {
+    ...mapState([
+      'ranks'
+    ])
+  },
   watch: {
     student() {
       this.currentName = this.student.name;
       this.currentRank = this.student.rank;
       this.currentSize = this.student.size;
     }
+  },
+  mounted() {
+    this.$store.dispatch('populateRanks');
   },
   methods: {
     updateStudent() {

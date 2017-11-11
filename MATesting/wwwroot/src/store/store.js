@@ -7,7 +7,8 @@ Vue.use(Vuex)
 const state = {
   showAdd: false,
   instructors: {},
-  students: {}
+  students: {},
+  ranks: {}
 }
 
 const mutations = {
@@ -19,6 +20,9 @@ const mutations = {
   },
   setStudents: (state, payload) => {
     state.students = payload
+  },
+  setRanks: (state, payload) => {
+    state.ranks = payload
   }
 }
 
@@ -39,6 +43,33 @@ const actions = {
       })
       .catch(err => {
         console.log(err)
+      })
+  },
+  populateRanks: ({state, commit}) => {
+    axios({method: 'get', url: 'http://localhost:59614/api/rank'})
+      .then(res => {
+        res.data.sort(function (a, b) {
+          return a - b
+        })
+        commit('setRanks', res.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
+  addRank: ({dispatch}, payload) => {
+    axios({method: 'post', url: 'http://localhost:59614/api/rank', data: payload})
+      .then(() => {
+        dispatch('populateRanks')
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  },
+  updateRank: ({state, dispatch}, payload) => {
+    axios({method: 'put', url: `http://localhost:59614/api/rank/${payload.id}`, data: payload})
+      .then(() => {
+        dispatch('populateRanks')
       })
   },
   sendInstructor: ({state, dispatch}, payload) => {
